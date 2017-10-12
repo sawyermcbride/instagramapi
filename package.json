@@ -1,0 +1,19 @@
+{
+  "name": "instagram_api_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sawyermcbride/instagramapi.git"
+  },
+  "author": "Sawyer McBride",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sawyermcbride/instagramapi/issues"
+  },
+  "homepage": "https://github.com/sawyermcbride/instagramapi#readme"
+}
