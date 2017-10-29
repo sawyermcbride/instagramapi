@@ -15,15 +15,15 @@
  
  //configs
  app.set('view engine', 'jade');
- app.set('veiws',__dirname+'/views');
+ app.set('views',__dirname+'/views');
  
- console.log(register);
  
  app.use(bodyParser.urlencoded({extended:false}));
  app.use(bodyParser.json());
  app.use(morgan('tiny'));
  
  app.post('/register', register, (req, res) => {
+  console.log('true');
   res.json({'registered':true})
  });
 
