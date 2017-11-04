@@ -5,8 +5,8 @@ CREATE DATABASE instagramapi;
 
 CREATE TABLE users (
     ID SERIAL PRIMARY KEY,
-    username VARCHAR,
     email VARCHAR,
-    name INTEGER
+    name VARCHAR,
+    password VARCHAR
 )
 

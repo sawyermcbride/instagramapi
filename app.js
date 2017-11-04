@@ -23,7 +23,6 @@
  app.use(morgan('tiny'));
  
  app.post('/register', register, (req, res) => {
-  console.log('true');
   res.json({'registered':true})
  });
 
