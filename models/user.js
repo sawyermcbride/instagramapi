@@ -19,9 +19,12 @@ class User {
         const checkDuplicate = new Promise( (res, rej) => {
             db.any('SELECT * FROM users WHERE email = $1', [self.email])
                 .then( (data) => {
-                    console.log(data);
+                    console.log('exists?');
+                    console.log(data.length);
                     if(data.length > 0)
                         rej(1); //1 means already exists
+                    else
+                        res();
                 })
                 .catch( (err) => {
                     rej('err');
@@ -40,22 +43,28 @@ class User {
             })
         }
             
-        return new Promise( (res, rej) => {
-            console.log(self);
+        return new Promise( (resolve, reject) => {
             bcrypt.genSalt(10, function(err, salt) {
                 bcrypt.hash("my password", salt, function(err, hash) {
                     checkDuplicate
-                        .then(createUser(hash))
-                        .catch( (code) => {
-                            res(code);
-                        })
-                        .then( (res, rej) => {
-                           console.log(res); 
-                        });
+                    .then( () => {
+                        createUser(hash).then(() => resolve());
+                    }, ( () => {
+                        console.log('user exists');
+                        reject('User already exists');
+                    }))
                 });
             });
+        });
+    }
+    
+    login(email, password) {
+        db.one('SELECT * FROM users WHERE email=$1', [email]).
+        .then( user => {
+            
         })
     }
+    
 }
 
 module.exports = User;

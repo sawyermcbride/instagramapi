@@ -22,9 +22,7 @@
  app.use(bodyParser.json());
  app.use(morgan('tiny'));
  
- app.post('/register', register, (req, res) => {
-  res.json({'registered':true})
- });
+ app.post('/register', register);
 
  app.get('/', (req, res) => {
    res.render('homepage');
