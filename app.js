@@ -17,7 +17,7 @@
  const router = express.Router();
  
  //configs
- app.set('view engine', 'jade');
+ app.set('view engine', 'pug');
  app.set('views',__dirname+'/views');
  
  
@@ -44,6 +44,6 @@
  
  app.get('/app', router)
  
-
+  
  
  app.listen(3000);
