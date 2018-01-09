@@ -1,0 +1,28 @@
+html
+    head
+        title Login to Surgetalk
+        link(rel='stylesheet' href="//fonts.googleapis.com/css?family=Open+Sans")
+        link(rel='stylesheet' href="/font-awesome-4.7.0/css/font-awesome.min.css")
+        link(rel='stylesheet' href="/style.css")
+        script(src='/main.js')
+    body
+        div.container
+            section.top-container
+                h2 Surgetalk
+            section.main-container
+                h5.message #{msg}
+                div.form-container.sm-div
+                    form(method='post' action='/login')
+                        div.form-elem-container
+                            i.fa.fa-user-o.white
+                            input(type='text' id='email' name='email' placeholder='Email') 
+                        div.form-elem-container
+                            i.fa.fa-lock.white
+                            input(type='password' id='password' name='password' placeholder='Password')
+                        input(type='submit' value='Login' id='submit-btn')
+                    br
+                    br
+                    a.register(href='/register') No account yet? Sign up here
+                    br
+                    br
+                    a.register(href='/reset') Forgot password? Reset it here

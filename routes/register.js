@@ -13,9 +13,9 @@ module.exports = function(req, res, next) {
     let email = req.body.email.toLowerCase();
     
     let user = new User(name, email, password);
-    user.save().then( () => {    
-        res.json({msg:`registered user: ${email}\n`});
-        
+    user.save().then( () => {
+        req.session.user = user;
+        res.redirect('/app');
     }, (msg) => {
         console.log(msg);
         res.status(409).json({msg:msg});
