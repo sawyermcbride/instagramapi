@@ -19,6 +19,7 @@
  //configs
  app.set('view engine', 'pug');
  app.set('views',__dirname+'/views');
+ process.env.PORT = 3000;
  
  
  app.use(bodyParser.urlencoded({extended:false}));
