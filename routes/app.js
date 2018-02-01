@@ -14,8 +14,14 @@ router.use((req, res, next) => {
 })
 
 router.get('/', (req, res) => {
-    res.send('App Page: Logged In as ' + req.session.user.obj.email);
+    res.render('app');
 })
+router.get('/user', (req, res) => {
+    if(!req.session.user) {
+        res.status(403).json(null);
+    }
+    res.json({'user': req.session.user})
+});
 
 
 module.exports = router;

@@ -7,9 +7,10 @@ body, html {
     height:100%;
 }
 body {
-    background:#D91E18
+    background:#ecf0f1
 }
 div.container {
+    min-width: 1400px;
     width:100%;
     height:100%;
     padding:0px;
@@ -37,9 +38,10 @@ section.main-container {
 div.form-container {
     margin-top: 5%;
     display: inline-block;
+    text-align: left;
     width:20%;
     /*background: rgba(108,122,137,.4);*/
-        border:3px solid white;
+    border:3px solid white;
 
     border-radius: 7px;
     text-align:center;
@@ -125,3 +127,65 @@ h5.message {
 /***********************  ******************/
 /************************ ******************/
 /*******************************************/
+
+/** main app */
+
+.full-height {
+    height:100%;
+}
+.brand-title {
+    font-size:22px;
+    color:#ecf0f1;
+    position: relative;
+    top:7px;
+    text-align: center;
+}
+ #app {
+     height:100%;
+     width:100%;
+ }
+ .side-bar-root {
+     text-align: center;
+     width:100%;
+     height:40%;
+ }
+.root-container {
+    width:100%;
+    height:100%;
+}
+hr{
+    border-color:#ecf0f1;
+    border-width: 2px;
+}
+.side-nav-container {
+    background:#e74c3c;
+    height:100%;
+    width:6%;
+    min-width:45px;
+    max-width:90px;
+}
+.app-main-container {
+    width:94%;
+}
+.side-bar-box {
+    width:100%;
+    height:42px;
+    margin:0px;
+    padding:5px;
+    position:relative;
+    top:50px;
+}
+.side-bar-box i {
+    text-align:center;
+    color:#ECF0F1;
+}
+.side-bar-box:hover {
+    cursor:pointer;
+}
+.side-bar-box.active  {
+    background:#C0392B;
+}
+
+.red {
+    color:#c0392b;
+}

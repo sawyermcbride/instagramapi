@@ -1,6 +1,7 @@
 /**
  * Instagram App 
  * Sawyer McBride
+ * https://instagram-api-sawyermcbride.c9users.io/
  */
  
  const express = require('express');
@@ -59,7 +60,10 @@ app.get('/', (req, res) => {
    res.render('homepage');
  });
  
-app.use('/app', router.listen(3000));
+app.use('/app', router);
 app.use(express.static('public'))
+
+
+app.listen(8080, '0.0.0.0');
 
 
