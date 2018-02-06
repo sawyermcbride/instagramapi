@@ -21,9 +21,13 @@ class App extends React.Component {
     componentDidMount() {
         axios.get('/app/user')
         .then( (response) => {
+            let obj = response.data.user.obj;    
+            console.log('account');
+            console.log(obj);
+            
             this.setState({
-                email:response.email,
-                name:response.name
+                email:obj.email,
+                name:obj.name
             })
         })
     }
@@ -37,7 +41,9 @@ class App extends React.Component {
                     />
                 </div>
                 <div className='app-main-container'>
-                    <MainView/>
+                    <MainView
+                        name={this.state.name}
+                    />
                 </div>
             </div>
         )

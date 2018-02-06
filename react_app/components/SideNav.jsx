@@ -23,7 +23,7 @@ class SideNav extends React.Component {
                     className={'side-bar-box'+ (this.props.activePage === 1 ? ' active':'')}
                     onClick={() => this.props.switchPage(1)}
                 >
-                    <i className="big comments icon"></i>
+                    <i className="big home icon"></i>
                 </div>
                 <div 
                     className={'side-bar-box'+ (this.props.activePage === 2 ? ' active':'')}
