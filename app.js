@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
     if(req.session.user) {
       res.redirect('/app');
     }
-   res.render('homepage');
+   res.render('new-home');
  });
  
 app.use('/app', router);

@@ -35,12 +35,6 @@ class SideNav extends React.Component {
                     className={'side-bar-box'+ (this.props.activePage === 3 ? ' active':'')}
                     onClick={() => this.props.switchPage(3)}
                 >
-                    <i className="big grid layout icon"></i>
-                </div>
-                <div 
-                    className={'side-bar-box'+ (this.props.activePage === 4 ? ' active':'')}
-                    onClick={() => this.props.switchPage(4)}
-                >
                     <i className="big bar chart icon"></i>
                 </div>
             </div>

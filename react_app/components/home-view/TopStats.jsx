@@ -9,52 +9,44 @@ class TopStats extends React.Component {
 
         return (
             <div>
-            <h3 class="ui top attached header">
+            <h3 className="ui top attached header">
               Today's Briefing 
             </h3>
-            <div class="ui attached segment">
-               <p>
+            <div className="ui attached segment">
                 <div className='ui three column divided grid'>
-                    <div class="row">
-                        <div class="column">
-                          <p>
-                            <div class="ui statistic red">
-                              <div class="value">
-                                76
-                              </div>
-                              <div class="label">
-                                Comments Today
-                              </div>
-                            </div>
-                          </p>
+                  <div className="row">
+                    <div className="column">
+                        <div className="ui statistic red">
+                          <div className="value">
+                            76
+                          </div>
+                          <div className="label">
+                            Comments Today
+                          </div>
                         </div>
-                        <div class="column">
-                          <p>
-                            <div class="ui statistic teal">
-                              <div class="value">
-                                45.5
-                              </div>
-                              <div class="label">
-                                Average Comments per Photo
-                              </div>
-                            </div>
-                          </p>
+                      </div>
+                    <div className="column">
+                      <div className="ui statistic teal">
+                        <div className="value">
+                          45.5
                         </div>
-                        <div class="column">
-                          <p>
-                            <div class="ui statistic blue">
-                              <div class="value">
-                                205
-                              </div>
-                              <div class="label">
-                                Un Responded Comments
-                              </div>
-                            </div>
-                          </p>
+                        <div className="label">
+                          Average Comments per Photo
                         </div>
+                      </div>
+                    </div>
+                    <div className="column">
+                      <div className="ui statistic blue">
+                        <div className="value">
+                          205
+                        </div>
+                        <div className="label">
+                          Un Responded Comments
+                        </div>
+                      </div>
+                    </div>
                     </div>
                 </div>
-              </p>
             </div> 
             </div>
             

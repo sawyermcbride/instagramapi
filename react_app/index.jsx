@@ -43,6 +43,7 @@ class App extends React.Component {
                 <div className='app-main-container'>
                     <MainView
                         name={this.state.name}
+                        activePage = {this.state.activePage}
                     />
                 </div>
             </div>
